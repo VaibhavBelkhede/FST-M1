@@ -58,6 +58,6 @@ SELECT customer_name,grade,salesman_name FROM customers LEFT JOIN salesman ON cu
 
 SELECT customer_name,salesman_name,commission FROM customers INNER JOIN salesman ON customers.salesman_id = salesman.salesman_id WHERE commission > 12;
 
-SELECT order_no,order_date,purchase_amount,customer_name,salesman_name FROM orders INNER JOIN salesman ON orders.salesman_id =salesman.salesman_id  
+SELECT order_no,order_date,purchase_amount,customer_name,salesman_name FROM orders INNER JOIN salesman ON orders.customer_id =salesman.customer_id  
     INNER JOIN  customers ON  orders.salesman_id =customers.salesman_id;
 
